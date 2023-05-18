@@ -29,3 +29,17 @@ F:\JatraApplication\obj\Debug\net6.0\refint\JatraApplication.dll
 F:\JatraApplication\obj\Debug\net6.0\JatraApplication.pdb
 F:\JatraApplication\obj\Debug\net6.0\JatraApplication.genruntimeconfig.cache
 F:\JatraApplication\obj\Debug\net6.0\ref\JatraApplication.dll
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\1.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\10.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\11.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\12.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\2.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\3.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\4.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\5.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\6.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\7.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\8.json
+F:\JatraApplication\bin\Debug\net6.0\CalendarJson\9.json
+F:\JatraApplication\bin\Debug\net6.0\Newtonsoft.Json.dll
+F:\JatraApplication\obj\Debug\net6.0\JatraApplication.csproj.CopyComplete
