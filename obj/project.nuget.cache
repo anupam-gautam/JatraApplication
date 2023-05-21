@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YLGyw7c7X/K87IaLnVfm6F89axCloHBFEszXJ6asSPfv0F1KqFJhiQ9CWkyoJBWvTZlymb7d3qXsgOwGH5QSew==",
+  "dgSpecHash": "KJsvV6rcN09tgtPwl7ek1PGWDI+Xc3OsmGUgZB2a6ElKhuBNczlh4LdbT2JKPZCSqrvDHa5osQ3o3EI9EA69IA==",
   "success": true,
   "projectFilePath": "D:\\JatraProject\\JatraApplication.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Tohfa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
