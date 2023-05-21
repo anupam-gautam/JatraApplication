@@ -1,5 +1,7 @@
 ﻿using JatraApplication.Models;
+using JatraApplication.Models.Calendar;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace JatraApplication.Controllers
@@ -15,6 +17,14 @@ namespace JatraApplication.Controllers
 
         public IActionResult Index()
         {
+            string json;
+            CalendarData calendarInfo;
+            using (StreamReader r = new StreamReader("../JatraApplication/CalendarJson/1.json"))
+            {
+                json = r.ReadToEnd();
+                calendarInfo = JsonConvert.DeserializeObject<CalendarData>(json);
+            }
+            ViewBag.calendarInfo = calendarInfo; // Corrected syntax
             return View();
         }
 
