@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oR1T6ACBTcSsB8ue0mY73Gns8+vuQRbjuR08bbhShSo=",
+  "Hash": "qesL7bfc6ufBhgEeciwC9miOaLlIO+lFMXIAjdVS6/U=",
   "Source": "JatraApplication",
   "BasePath": "_content/JatraApplication",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "F:\\JatraApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\JatraApplication.bundle.scp.css"
     },
     {
+      "Identity": "F:\\JatraApplication\\wwwroot\\css\\calendar.css",
+      "SourceId": "JatraApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\JatraApplication\\wwwroot\\",
+      "BasePath": "_content/JatraApplication",
+      "RelativePath": "css/calendar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\calendar.css"
+    },
+    {
       "Identity": "F:\\JatraApplication\\wwwroot\\css\\site.css",
       "SourceId": "JatraApplication",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\JatraApplication\\wwwroot\\js\\calendar.js",
+      "SourceId": "JatraApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\JatraApplication\\wwwroot\\",
+      "BasePath": "_content/JatraApplication",
+      "RelativePath": "js/calendar.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\calendar.js"
     },
     {
       "Identity": "F:\\JatraApplication\\wwwroot\\js\\site.js",

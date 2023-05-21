@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\JatraApplication.bundle.scp.css"
     },
     {
+      "Id": "F:\\JatraApplication\\wwwroot\\css\\calendar.css",
+      "PackagePath": "staticwebassets\\css\\calendar.css"
+    },
+    {
       "Id": "F:\\JatraApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "F:\\JatraApplication\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\JatraApplication\\wwwroot\\js\\calendar.js",
+      "PackagePath": "staticwebassets\\js\\calendar.js"
     },
     {
       "Id": "F:\\JatraApplication\\wwwroot\\js\\site.js",
