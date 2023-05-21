@@ -43,3 +43,4 @@ F:\JatraApplication\bin\Debug\net6.0\CalendarJson\8.json
 F:\JatraApplication\bin\Debug\net6.0\CalendarJson\9.json
 F:\JatraApplication\bin\Debug\net6.0\Newtonsoft.Json.dll
 F:\JatraApplication\obj\Debug\net6.0\JatraApplication.csproj.CopyComplete
+F:\JatraApplication\bin\Debug\net6.0\NepaliCalendarBS.dll
