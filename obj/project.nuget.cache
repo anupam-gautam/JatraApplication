@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KJsvV6rcN09tgtPwl7ek1PGWDI+Xc3OsmGUgZB2a6ElKhuBNczlh4LdbT2JKPZCSqrvDHa5osQ3o3EI9EA69IA==",
+  "dgSpecHash": "EQPlNoeTnBPjrurbQs1wdbDmhq7vXKWmNYs3hp6fuuj1GJ94F22VIV2WJQJq1hilGepYBA52BzZipQjeDRIBtg==",
   "success": true,
   "projectFilePath": "D:\\JatraProject\\JatraApplication.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tohfa\\.nuget\\packages\\nepalicalendarbs\\1.1.5\\nepalicalendarbs.1.1.5.nupkg.sha512",
     "C:\\Users\\Tohfa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
