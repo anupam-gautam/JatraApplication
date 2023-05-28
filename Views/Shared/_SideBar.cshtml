@@ -1,0 +1,21 @@
+﻿@using JatraApplication.Models.DatabaseModels;
+@{
+    JatraDbContext _context = new JatraDbContext();
+}
+<div class="col-3 side-nav">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Events List</a>
+        </li>
+        @{
+
+            foreach (var i in _context.Events.ToList())
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="#">@i.EventName</a>
+                </li>
+            }
+        }
+    </ul>
+</div>
+

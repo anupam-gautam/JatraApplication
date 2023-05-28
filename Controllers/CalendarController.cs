@@ -13,7 +13,7 @@ namespace JatraApplication.Controllers
         {
             string json;
             CalendarData calendarInfo;
-            using (StreamReader r = new StreamReader("../JatraApplication/CalendarJson/1.json"))
+            using (StreamReader r = new StreamReader("JatraApplication/CalendarJson/1.json"))
             {
                 json = r.ReadToEnd();
                 calendarInfo = JsonConvert.DeserializeObject<CalendarData>(json);

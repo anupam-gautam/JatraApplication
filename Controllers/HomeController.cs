@@ -1,6 +1,8 @@
 ﻿using JatraApplication.Models;
 using JatraApplication.Models.Calendar;
+using JatraApplication.Models.DatabaseModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using NepaliCalendarBS;
 using Newtonsoft.Json;
 using System.Diagnostics;
@@ -10,14 +12,20 @@ namespace JatraApplication.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly JatraDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger, JatraDbContext context)
         {
             _logger = logger;
+            _context = context;
+
         }
 
         public IActionResult Index(int? month)
         {
+
+
             string json;
             CalendarData calendarInfo;
             var curDate = NepaliCalendar.TodayBS();

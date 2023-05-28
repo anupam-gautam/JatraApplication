@@ -32,25 +32,14 @@
     </header>
 
 
+    
+
     <!-- Sidebar content -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3 side-nav">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link component-a" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            @{
+                Html.RenderPartial("_SideBar");
+            }
             <div class="container col py-3">
                 <main role="main" class="pb-3">
                     @RenderBody()

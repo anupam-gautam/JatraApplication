@@ -1,0 +1,11 @@
+*.v2
+*.suo
+*.1
+*.json
+*.dll
+*.pdb
+*.props
+*.targets
+*.cache
+*.txt
+*.editorconfig
