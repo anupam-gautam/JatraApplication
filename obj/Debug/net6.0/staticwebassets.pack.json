@@ -5,12 +5,144 @@
       "PackagePath": "staticwebassets\\JatraApplication.bundle.scp.css"
     },
     {
+      "Id": "F:\\hack\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
       "Id": "F:\\hack\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "F:\\hack\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\css\\style.css.map"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\css\\style.scss",
+      "PackagePath": "staticwebassets\\css\\style.scss"
+    },
+    {
       "Id": "F:\\hack\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\fonts\\Poppins\\OFL.txt",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\OFL.txt"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\fonts\\Poppins\\Poppins-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Bold.ttf"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\fonts\\Poppins\\Poppins-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Regular.ttf"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\fonts\\ethnocentric\\ethnocentric rg it.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ethnocentric\\ethnocentric rg it.ttf"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\fonts\\ethnocentric\\ethnocentric rg.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ethnocentric\\ethnocentric rg.ttf"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\fonts\\ethnocentric\\read-this.html",
+      "PackagePath": "staticwebassets\\fonts\\ethnocentric\\read-this.html"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\fonts\\ethnocentric\\typodermic-eula-02-2014.pdf",
+      "PackagePath": "staticwebassets\\fonts\\ethnocentric\\typodermic-eula-02-2014.pdf"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\about-img.jpg",
+      "PackagePath": "staticwebassets\\images\\about-img.jpg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\client.png",
+      "PackagePath": "staticwebassets\\images\\client.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\education.svg",
+      "PackagePath": "staticwebassets\\images\\education.svg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\envelope-white.png",
+      "PackagePath": "staticwebassets\\images\\envelope-white.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\help.svg",
+      "PackagePath": "staticwebassets\\images\\help.svg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\location-white.png",
+      "PackagePath": "staticwebassets\\images\\location-white.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\menu.png",
+      "PackagePath": "staticwebassets\\images\\menu.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\next.png",
+      "PackagePath": "staticwebassets\\images\\next.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\photo-size.svg",
+      "PackagePath": "staticwebassets\\images\\photo-size.svg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\planet-earth.svg",
+      "PackagePath": "staticwebassets\\images\\planet-earth.svg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\play.png",
+      "PackagePath": "staticwebassets\\images\\play.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\prev.png",
+      "PackagePath": "staticwebassets\\images\\prev.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\quote.png",
+      "PackagePath": "staticwebassets\\images\\quote.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\search-icon.png",
+      "PackagePath": "staticwebassets\\images\\search-icon.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\shield.svg",
+      "PackagePath": "staticwebassets\\images\\shield.svg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\slider-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\slider-bg.jpg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\telephone-white.png",
+      "PackagePath": "staticwebassets\\images\\telephone-white.png"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\images\\vegan.svg",
+      "PackagePath": "staticwebassets\\images\\vegan.svg"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\js\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.min.js"
     },
     {
       "Id": "F:\\hack\\wwwroot\\js\\site.js",
