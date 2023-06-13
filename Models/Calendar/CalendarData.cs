@@ -14,6 +14,16 @@
         public string f { get; set; }
         public bool h { get; set; }
         public int d { get; set; }
+        public string? eventName { get; set; }
+
+        //public Events? events { get; set; }
+    }
+
+
+    public class Events
+    {
+        public int? eventId { get; set; }
+        public string? eventName { get; set; }
     }
 
     public class CalendarData
@@ -24,5 +34,7 @@
         public string[] marriage { get; set; }
         public string[] bratabandha { get; set; }
     }
+
+
 
 }

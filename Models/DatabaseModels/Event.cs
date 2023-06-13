@@ -20,4 +20,5 @@ public partial class Event
     public string? EventCommunity { get; set; }
 
     public string? EventHighlights { get; set; }
+
 }

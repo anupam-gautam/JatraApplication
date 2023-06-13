@@ -24,8 +24,6 @@ namespace JatraApplication.Controllers
 
         public IActionResult Index(int? month)
         {
-
-
             string json;
             CalendarData calendarInfo;
             var curDate = NepaliCalendar.TodayBS();
@@ -35,8 +33,40 @@ namespace JatraApplication.Controllers
                 json = r.ReadToEnd();
                 calendarInfo = JsonConvert.DeserializeObject<CalendarData>(json);
             }
+            var allEvents = _context.Events.Select(s => new EventViewModel()
+            {
+                EventId = s.EventId,
+                EventName = s.EventName,
+                EventDescription = s.EventDescription,
+                EventStartDate = s.EventStartDate,
+                EventEndDate = s.EventEndDate,
+                EventLocation = s.EventLocation,
+                EventCommunity = s.EventLocation,
+                EventHighlights = s.EventHighlights,
+            }).ToList();
+
+            foreach (var i in allEvents)
+            {
+                foreach (var j in calendarInfo.days)
+                {
+                    var eventDateNepali = NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(i.EventStartDate));
+                    string d = Convert.ToString(NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(i.EventStartDate)));
+                    DateTime d = DateTime.Parse(d);
+                    i.DevnagiriDay = DateTimeHelper.DTfor(i.EventStartDate.Value);
+
+
+                    if (eventDateNepali != null && Convert.ToString(eventDateNepali.Month) == month.ToString() && Convert.ToString(eventDateNepali.Day) == j.n)
+                    {
+                        j.eventName = i.EventName;
+
+                    }
+
+                }
+            }
+            NepaliDate convertedDate = NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(allEvents.First().EventStartDate));
             ViewBag.calendarInfo = calendarInfo; // Corrected syntax
             ViewBag.currMonth = month;
+            //ViewBag.currMonthEvents = currMonthEvents;
             return View();
         }
 

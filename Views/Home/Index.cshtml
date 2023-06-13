@@ -21,7 +21,7 @@
                 ←Previous
             </button>
         </div>
-        <div class="col"><b>@calendarInfo.metadata.np</b></div>
+        <div class="col"><b>@calendarInfo.metadata.np @calendarInfo.metadata.en</b></div>
         <div class="col-2">
             <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth+1))">
                 Next→
@@ -38,7 +38,8 @@
         <ul class="days  ">
             @foreach (var w in calendarInfo.days)
             {
-                <li class=" ">@w.n</li>
+                <li class=" ">@w.n <small>@w.e</small> </li>
+                @*<li class=" ">@w.e</li>*@
             }
 
         </ul>
