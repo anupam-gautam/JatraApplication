@@ -51,8 +51,8 @@ namespace JatraApplication.Controllers
                 {
                     var eventDateNepali = NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(i.EventStartDate));
                     string d = Convert.ToString(NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(i.EventStartDate)));
-                    DateTime d = DateTime.Parse(d);
-                    i.DevnagiriDay = DateTimeHelper.DTfor(i.EventStartDate.Value);
+                    DateTime sdd = DateTime.Parse(d);
+                    i.DevnagiriDay = DateTimeHelper.DTfor(sdd);
 
 
                     if (eventDateNepali != null && Convert.ToString(eventDateNepali.Month) == month.ToString() && Convert.ToString(eventDateNepali.Day) == j.n)
