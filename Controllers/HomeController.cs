@@ -49,13 +49,12 @@ namespace JatraApplication.Controllers
             {
                 foreach (var j in calendarInfo.days)
                 {
-                    var eventDateNepali = NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(i.EventStartDate));
-                    string d = Convert.ToString(NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(i.EventStartDate)));
-                    DateTime sdd = DateTime.Parse(d);
-                    i.DevnagiriDay = DateTimeHelper.DTfor(sdd);
+                    string dateTimeEventDateNepali = Convert.ToString(NepaliCalendar.Convert_AD2BS(Convert.ToDateTime(i.EventStartDate)));
+                    DateTime parsedDN = DateTime.Parse(dateTimeEventDateNepali);
+                    i.DevnagiriDay = DateTimeHelper.DTfor(parsedDN);
 
 
-                    if (eventDateNepali != null && Convert.ToString(eventDateNepali.Month) == month.ToString() && Convert.ToString(eventDateNepali.Day) == j.n)
+                    if (parsedDN != null && Convert.ToString(parsedDN.Month) == month.ToString() && i.DevnagiriDay == j.n)
                     {
                         j.eventName = i.EventName;
 

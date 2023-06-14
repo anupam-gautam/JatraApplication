@@ -1,3 +1,6 @@
+# Ignore bin folders
+*/bin/
+*/obj/
 *.v2
 *.suo
 *.1
@@ -9,3 +12,4 @@
 *.cache
 *.txt
 *.editorconfig
+.vs/
