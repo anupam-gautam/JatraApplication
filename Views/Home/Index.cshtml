@@ -1,11 +1,51 @@
-﻿@{
+﻿@using JatraApplication.Controllers;
+@using JatraApplication.Models.Calendar
+@model CalendarData
+
+@{
     ViewData["Title"] = "Home Page";
+    CalendarData calendarInfo = ViewBag.calendarInfo;
+    var weekDays = Html.GetEnumSelectList(typeof(WeekDays));
+    int currMonth = (int)ViewBag.currMonth;
 }
 
+<link href="~/css/calendar.css" rel="stylesheet" />
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Calendar</h1>
+
+
+    <div class="row">
+        <div class="col-2">
+            <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth-1))">
+                ←Previous
+            </button>
+        </div>
+        <div class="col"><b>@calendarInfo.metadata.np @calendarInfo.metadata.en</b></div>
+        <div class="col-2">
+            <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth+1))">
+                Next→
+            </button>
+        </div>
+    </div>
+    <div class="calendar">
+        <ul class="weeks">
+            @foreach (var w in weekDays)
+            {
+                <li class="component-b">@w.Text</li>
+            }
+        </ul>
+        <ul class="days  ">
+            @foreach (var w in calendarInfo.days)
+            {
+                <li class=" ">@w.n <small>@w.e</small> </li>
+                @*<li class=" ">@w.e</li>*@
+            }
+
+        </ul>
+    </div>
 </div>
+
 
 <section class="info_section layout_padding">
     <div class="container">
@@ -85,3 +125,19 @@
         </div>
     </div>
 </section>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/js/calendar.js"></script>
+<script src="~/js/common/test.js"></script>
+<script type ="text/javascript">
+    $(document).ready(function () {
+
+        var s = new Data();
+        //s.test = '@Url.Action("SignUp", "DestinDIY")';
+        s.test = 'Test';
+    });
+</script>
+

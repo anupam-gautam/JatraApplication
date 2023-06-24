@@ -32,6 +32,7 @@
     </style>
 </head>
 <body>
+@*<<<<<<< HEAD*@
     @{
         string currentUrl = Context.Request.Path.ToString().ToLower();
     }
@@ -46,6 +47,14 @@
                     </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+@*=======
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">JatraApplication</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+>>>>>>> origin/CalendarImplementation*@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -75,7 +84,10 @@
     <!-- end header section -->
 
 
+
+
     <!-- Sidebar content -->
+@*<<<<<<< HEAD*@
 
 
     <div>
@@ -85,9 +97,19 @@
             @*main body*@
             <div >
                 <main role="main" >
+@*=======
+    <div class="container-fluid">
+        <div class="row">
+            @{
+                Html.RenderPartial("~/Views/Common/_SideBar.cshtml");
+            }
+            <div class="container col py-3">
+                <main role="main" class="pb-3">
+>>>>>>> origin/CalendarImplementation*@
                     @RenderBody()
                 </main>
             </div>
+
         </div>
     </div>
     
@@ -102,15 +124,22 @@
     </section>
     <!-- footer section -->
 
+    <!-- Bottom Help Button-->
+    @{
+        Html.RenderPartial("~/Views/Common/Help.cshtml");
+    }
 
-    @*footer*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
     <footer class="border-top footer text-muted">
         <div class="container">
           
         </div>
     </footer>
+@*<<<<<<< HEAD*@
     <script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="~/js/bootstrap.js"></script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
