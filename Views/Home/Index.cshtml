@@ -10,41 +10,50 @@
 }
 
 <link href="~/css/calendar.css" rel="stylesheet" />
-
-<div class="text-center">
-    <h1 class="display-4">Calendar</h1>
-
-
-    <div class="row">
-        <div class="col-2">
-            <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth-1))">
-                ←Previous
-            </button>
-        </div>
-        <div class="col"><b>@calendarInfo.metadata.np @calendarInfo.metadata.en</b></div>
-        <div class="col-2">
-            <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth+1))">
-                Next→
-            </button>
-        </div>
+<div class="row">
+    <div class="col-3">
+        @{
+                Html.RenderPartial("~/Views/Common/_SideBar.cshtml");
+        }
     </div>
-    <div class="calendar">
-        <ul class="weeks">
-            @foreach (var w in weekDays)
+    <div class="col-9">
+        <div class="container-fluid text-center" @*style="margin-left:10%"*@>
+            <h1 class="display-4">Calendar</h1>
+
+
+            <div class="row">
+                <div class="col-2">
+                    <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth-1))">
+                        ←Previous
+                    </button>
+                </div>
+                <div class="col"><b>@calendarInfo.metadata.np @calendarInfo.metadata.en</b></div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth+1))">
+                        Next→
+                    </button>
+                </div>
+            </div>
+            <div class="calendar">
+                <ul class="weeks">
+                    @foreach (var w in weekDays)
             {
-                <li class="component-b">@w.Text</li>
+                    <li class="component-b">@w.Text</li>
             }
-        </ul>
-        <ul class="days  ">
-            @foreach (var w in calendarInfo.days)
+                </ul>
+                <ul class="days  " id="calendardays">
+                    @foreach (var w in calendarInfo.days)
             {
-                <li class=" ">@w.n <small>@w.e</small> </li>
-                @*<li class=" ">@w.e</li>*@
+                    <li class=" " id="ev-@w.eventid">@w.n <small>@w.e</small> </li>
+                    @*<li class=" ">@w.e</li>*@
             }
 
-        </ul>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
+
 
 
 <section class="info_section layout_padding">

@@ -28,7 +28,7 @@ namespace JatraApplication.Controllers
             CalendarData calendarInfo;
             var curDate = NepaliCalendar.TodayBS();
             month = (month == null) ? curDate.Month : month;
-            using (StreamReader r = new StreamReader("../JatraApplication/CalendarJson/" + month.ToString() + ".json"))
+            using (StreamReader r = new StreamReader("../hack/CalendarJson/" + month.ToString() + ".json"))
             {
                 json = r.ReadToEnd();
                 calendarInfo = JsonConvert.DeserializeObject<CalendarData>(json);
@@ -57,7 +57,7 @@ namespace JatraApplication.Controllers
                     if (parsedDN != null && Convert.ToString(parsedDN.Month) == month.ToString() && i.DevnagiriDay == j.n)
                     {
                         j.eventName = i.EventName;
-
+                        j.eventid = i.EventId;
                     }
 
                 }

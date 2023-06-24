@@ -96,16 +96,17 @@
 
             @*main body*@
             <div >
-                <main role="main" >
-@*=======
-    <div class="container-fluid">
-        <div class="row">
-            @{
-                Html.RenderPartial("~/Views/Common/_SideBar.cshtml");
-            }
-            <div class="container col py-3">
-                <main role="main" class="pb-3">
->>>>>>> origin/CalendarImplementation*@
+               
+                <main   role="main" >
+                    @*=======
+                <div class="container-fluid">
+                    <div class="row">
+                        @{
+                            Html.RenderPartial("~/Views/Common/_SideBar.cshtml");
+                        }
+                        <div class="container col py-3">
+                            <main role="main" class="pb-3">
+            >>>>>>> origin/CalendarImplementation*@
                     @RenderBody()
                 </main>
             </div>
@@ -153,6 +154,21 @@
         function closeNav() {
             document.getElementById("myNav").style.width = "0%";
         }
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $(".side-nav a").hover(function () {
+                debugger
+                var eventid = $(this).data("id");
+                $("#calendardays #ev-" + eventid).css("background-color", "red");
+                //$(this)
+            }, function () { //this is for after the mouse is moved away
+                var eventid = $(this).data("id");
+                $("#calendardays #ev-" + eventid).css("background-color", "white");
+                //$(this).css("background-color", "pink");
+            });
+        })
     </script>
 </body>
 </html>

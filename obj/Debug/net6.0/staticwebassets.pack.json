@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
+      "Id": "F:\\hack\\wwwroot\\css\\calendar.css",
+      "PackagePath": "staticwebassets\\css\\calendar.css"
+    },
+    {
       "Id": "F:\\hack\\wwwroot\\css\\responsive.css",
       "PackagePath": "staticwebassets\\css\\responsive.css"
     },
@@ -139,6 +143,14 @@
     {
       "Id": "F:\\hack\\wwwroot\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\js\\calendar.js",
+      "PackagePath": "staticwebassets\\js\\calendar.js"
+    },
+    {
+      "Id": "F:\\hack\\wwwroot\\js\\common\\test.js",
+      "PackagePath": "staticwebassets\\js\\common\\test.js"
     },
     {
       "Id": "F:\\hack\\wwwroot\\js\\jquery-3.4.1.min.js",

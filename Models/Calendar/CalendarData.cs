@@ -15,7 +15,7 @@
         public bool h { get; set; }
         public int d { get; set; }
         public string? eventName { get; set; }
-
+        public int eventid { get;set; }
         //public Events? events { get; set; }
     }
 
@@ -33,7 +33,8 @@
         public string[] holiFest { get; set; }
         public string[] marriage { get; set; }
         public string[] bratabandha { get; set; }
-    }
+        public int EventId { get; set; }
+    } 
 
 
 

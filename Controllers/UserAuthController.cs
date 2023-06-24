@@ -1,5 +1,5 @@
-﻿using JatraApplication.DataAccess.Context;
-using JatraApplication.Models;
+﻿using JatraApplication.Models;
+using JatraApplication.Models.DatabaseModels;
 using JatraApplication.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -37,7 +37,7 @@ namespace JatraApplication.Controllers
                     //HttpContext.Session.SetString(SessionUser, getUser.UserName.ToString());
                     //HttpContext.Session.SetString(SessionUserId, getUser.UserId.ToString());
                    
-                    return Json(getUser.UserId);
+                    return Json(getUser.Id);
                 }
                 else
                 {
@@ -60,7 +60,7 @@ namespace JatraApplication.Controllers
         [HttpPost]
         public JsonResult SignUp(LoginModel users)
         {
-            TUsers entity = new TUsers();
+            User entity = new User();
             Userrepo _userRepo = new Userrepo();
 
             var getUser = _userRepo.getUsername(users.UserName);
@@ -76,13 +76,9 @@ namespace JatraApplication.Controllers
                 var password = LoginHelper.EncodePassword(users.Password, keyNew);
                 _userRepo.VCode = keyNew;
                 _userRepo.Password = password;
-                _userRepo.UserName = users.UserName;
-                //entity.FirstName = users.FirstName;
-                //entity.MiddleName = users.MiddleName;
-                //entity.LastName = users.LastName;
-                //entity.Contact = users.Contact;
-                //entity.Address = users.Address;
-
+                _userRepo.Email = users.UserName;
+                _userRepo.FirstName = users.FirstName;
+                _userRepo.LastName = users.LastName;
                 _userRepo.Roles = 1;
                 int userId = _userRepo.AddUpdateUser();
                 //HttpContext.Session.SetString(SessionUser, _userRepo.UserName);

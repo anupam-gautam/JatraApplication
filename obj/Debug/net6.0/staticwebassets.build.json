@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "083xGey+ieind50nP13/s937zK4sRsFDHB7YraeQbDQ=",
+  "Hash": "V/w5lPXXUBtL/ZiH9i9ofOc5z/VToMvOVtsGtbIVhC0=",
   "Source": "JatraApplication",
   "BasePath": "_content/JatraApplication",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
+    },
+    {
+      "Identity": "F:\\hack\\wwwroot\\css\\calendar.css",
+      "SourceId": "JatraApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\hack\\wwwroot\\",
+      "BasePath": "_content/JatraApplication",
+      "RelativePath": "css/calendar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\calendar.css"
     },
     {
       "Identity": "F:\\hack\\wwwroot\\css\\responsive.css",
@@ -627,6 +644,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.js"
+    },
+    {
+      "Identity": "F:\\hack\\wwwroot\\js\\calendar.js",
+      "SourceId": "JatraApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\hack\\wwwroot\\",
+      "BasePath": "_content/JatraApplication",
+      "RelativePath": "js/calendar.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\calendar.js"
+    },
+    {
+      "Identity": "F:\\hack\\wwwroot\\js\\common\\test.js",
+      "SourceId": "JatraApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\hack\\wwwroot\\",
+      "BasePath": "_content/JatraApplication",
+      "RelativePath": "js/common/test.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\common\\test.js"
     },
     {
       "Identity": "F:\\hack\\wwwroot\\js\\jquery-3.4.1.min.js",

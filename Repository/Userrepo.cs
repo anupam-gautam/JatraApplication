@@ -1,4 +1,4 @@
-﻿using JatraApplication.DataAccess.Context;
+﻿using JatraApplication.Models.DatabaseModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
 
@@ -8,28 +8,33 @@ namespace JatraApplication.Repository
     {
 
 
-        TUsers _user = new TUsers();
+        User _user = new User();
       
-        private readonly Context context;
+        private readonly JatraDbContext context;
         public Userrepo()
         {
-            context = new Context();
+            context = new JatraDbContext();
         }
-        public int? UserId
+        public int UserId
         {
-            get { return _user.UserId; }
-            set { _user.UserId = value; }
+            get { return _user.Id; }
+            set { _user.Id = value; }
         }
 
-        public string UserName
+        public string Email
         {
-            get { return _user.UserName; }
-            set { _user.UserName = value; }
+            get { return _user.Email; }
+            set { _user.Email = value; }
         }
-        public string FullName
+        public string FirstName
         {
-            get { return _user.FullName; }
-            set { _user.FullName = value; }
+            get { return _user.FirstName; }
+            set { _user.FirstName = value; }
+        }
+        public string LastName
+        {
+            get { return _user.LastName; }
+            set { _user.LastName = value; }
         }
         public string Password
         {
@@ -98,29 +103,29 @@ namespace JatraApplication.Repository
         {
             if(UserId !=null)
             {
-                 context.TUsers.Update(_user);
+                 context.Users.Update(_user);
                 context.SaveChanges();
-                return UserId.Value;
+                return UserId;
             }
-           context.TUsers.Add(_user);
+           context.Users.Add(_user);
             context.SaveChanges();
-            return _user.UserId.Value;
+            return _user.Id;
         }
-        public TUsers getUsername(string userName)
+        public User getUsername(string userName)
         {
-            IQueryable<TUsers> i = context.TUsers;
-            var test = i.ToList().Where(u => u.UserName == userName).FirstOrDefault();
+            IQueryable<User> i = context.Users;
+            var test = i.ToList().Where(u => u.Email == userName).FirstOrDefault();
             return test;
         }
-        public TUsers GetById(int UserId)
+        public User GetById(int UserId)
         {
-            IQueryable<TUsers> i = context.TUsers;
-            var test = i.ToList().Where(u => u.UserId == UserId).FirstOrDefault();
+            IQueryable<User> i = context.Users;
+            var test = i.ToList().Where(u => u.Id == UserId).FirstOrDefault();
             return test;
         }
-        public List<TUsers> getList()
+        public List<User> getList()
         {
-            IQueryable<TUsers> i = context.TUsers;
+            IQueryable<User> i = context.Users;
             var test = i.ToList();
             return test;
         }
@@ -128,8 +133,8 @@ namespace JatraApplication.Repository
      
         public bool ValidateUser(string userName, string password)
         {
-            IQueryable<TUsers> i = context.TUsers;
-            var test = i.ToList().Where(u => u.UserName == userName && u.Password == password).FirstOrDefault();
+            IQueryable<User> i = context.Users;
+            var test = i.ToList().Where(u => u.Email == userName && u.Password == password).FirstOrDefault();
             if (test != null)
             {
                 return true;
@@ -148,7 +153,7 @@ namespace JatraApplication.Repository
         //    {
         //        _userInfo.ImageLocation = entity.ImageLocation;
         //    }
-        //    context.UserInfo.Attach(_userInfo);
+        //    context.UsersInfo.Attach(_userInfo);
         //    context.Entry(_userInfo).State = EntityState.Modified;
 
         //    context.SaveChanges();
@@ -157,9 +162,9 @@ namespace JatraApplication.Repository
         {
             try
             {
-                var data = context.TUsers.Where(a => a.UserId == userId).FirstOrDefault();
+                var data = context.Users.Where(a => a.Id == userId).FirstOrDefault();
                 data.Roles = roles;
-                context.TUsers.Update(data);
+                context.Users.Update(data);
                 return true;
             }
             catch(Exception)
