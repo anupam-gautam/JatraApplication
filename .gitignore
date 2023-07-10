@@ -13,3 +13,7 @@
 *.txt
 *.editorconfig
 .vs/
+
+
+bin/
+obj/
