@@ -10,143 +10,157 @@
 }
 
 <link href="~/css/calendar.css" rel="stylesheet" />
-<div class="row">
-    <div class="col-3">
-        @{
+
+<body>
+    <div class="row">
+        <div class="col-3">
+            @{
                 Html.RenderPartial("~/Views/Common/_SideBar.cshtml");
-        }
-    </div>
-    <div class="col-9">
-        <div class="container-fluid text-center" @*style="margin-left:10%"*@>
-            <h1 class="display-4">Calendar</h1>
-
-
-            <div class="row">
-                <div class="col-2">
-                    <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth-1))">
-                        ←Previous
-                    </button>
-                </div>
-                <div class="col"><b>@calendarInfo.metadata.np @calendarInfo.metadata.en</b></div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth+1))">
-                        Next→
-                    </button>
-                </div>
-            </div>
-            <div class="calendar">
-                <ul class="weeks">
-                    @foreach (var w in weekDays)
-            {
-                    <li class="component-b">@w.Text</li>
             }
-                </ul>
-                <ul class="days  " id="calendardays">
-                    @foreach (var w in calendarInfo.days)
-            {
-                    <li class=" " id="ev-@w.eventid">@w.n <small>@w.e</small> </li>
-                    @*<li class=" ">@w.e</li>*@
-            }
-
-                </ul>
-            </div>
         </div>
-    </div>
-</div>
+        <div class="col-9">
+            <div class="container-fluid text-center" @*style="margin-left:10%"*@>
+                <h1 class="display-4">Calendar</h1>
 
 
-
-<section class="info_section layout_padding">
-    <div class="container">
-        <div class="info_form">
-
-            <div class="row">
-                <div class="offset-lg-3 col-lg-3">
-                    <h5 class="form_heading">
-                        Newsletter
-                    </h5>
-                </div>
-                <div class="col-md-6">
-                    <form action="#">
-                        <input type="text" placeholder="Enter Your email">
-                        <button>
-                            subscribe
+                <div class="row">
+                    <div class="col-2">
+                        <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth-1))">
+                            ←Previous
                         </button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="info_logo">
-                    <div>
-                        <a href="">
-                            <img src="~/images/logo.png" alt="" />
-                            <span>
-                                Jatrai Jatra
-                            </span>
-                        </a>
                     </div>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration
-                    </p>
+                    <div class="col"><b>@calendarInfo.metadata.np @calendarInfo.metadata.en</b></div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth+1))">
+                            Next→
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="info_links ">
-                    <h5>
-                        Contact Us
-                    </h5>
-                    <p class="pr-0 pr-md-4 pr-lg-5">
-                        Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-                        odio. Quisque volutpat mattis eros
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="info_insta">
-                    <h5>
-                        INFORMATION
-                    </h5>
-                    <p class="pr-0 pr-md-4 pr-md-5">
-                        Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-                        odio. Quisque volutpat mattis eros
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="pl-0 pl-lg-5 pl-md-4">
-                    <h5>
-                        MY ACCOUNT
+                <div class="calendar" id="calendar">
+                    <ul class="weeks">
+                        @foreach (var w in weekDays)
+                        {
+                            <li class="component-b">@w.Text</li>
+                        }
+                    </ul>
+                    <ul class="days  " id="calendardays">
+                        @foreach (var w in calendarInfo.days)
+                        {
+                            <li class=" " data-eventId="@w.eventid" id="ev-@w.eventid">@w.n <small>@w.e</small> </li>
+                            @*<li class=" ">@w.e</li>*@
+                        }
 
-                    </h5>
-                    <p>
-                        Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-                        odio. Quisque volutpat mattis eros
-                    </p>
-
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
 
 
+    <section class="info_section layout_padding">
+        <div class="container">
+            <div class="info_form">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="~/js/calendar.js"></script>
-<script src="~/js/common/test.js"></script>
-<script type ="text/javascript">
-    $(document).ready(function () {
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-3">
+                        <h5 class="form_heading">
+                            Newsletter
+                        </h5>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="#">
+                            <input type="text" placeholder="Enter Your email">
+                            <button>
+                                subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
 
-        var s = new Data();
-        //s.test = '@Url.Action("SignUp", "DestinDIY")';
-        s.test = 'Test';
-    });
-</script>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="info_logo">
+                        <div>
+                            <a href="">
+                                <img src="~/images/logo.png" alt="" />
+                                <span>
+                                    Jatrai Jatra
+                                </span>
+                            </a>
+                        </div>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info_links ">
+                        <h5>
+                            Contact Us
+                        </h5>
+                        <p class="pr-0 pr-md-4 pr-lg-5">
+                            Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+                            odio. Quisque volutpat mattis eros
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info_insta">
+                        <h5>
+                            INFORMATION
+                        </h5>
+                        <p class="pr-0 pr-md-4 pr-md-5">
+                            Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+                            odio. Quisque volutpat mattis eros
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="pl-0 pl-lg-5 pl-md-4">
+                        <h5>
+                            MY ACCOUNT
 
+                        </h5>
+                        <p>
+                            Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+                            odio. Quisque volutpat mattis eros
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    @section scripts{
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="~/js/calendar.js"></script>
+        @*<script src="~/js/common/test.js"></script>*@
+        <script src="~/js/pagescripts/home/EventsData.js"></script>
+
+
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                //var s = new Data();
+                ////s.test = '@Url.Action("SignUp", "DestinDIY")';
+                //s.test = 'Test';
+
+                var ed = new EventsDetail();
+                ed.getEventDetailUrl = '@Url.Action("GetEventDetails","Event")';
+                ed.init();
+
+            });
+        </script>
+    }
+
+
+</body>

@@ -24,4 +24,8 @@
     <Folder Include="wwwroot\NewFolder\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\Pagescripts\Home\EventsData.js" />
+  </ItemGroup>
+
 </Project>

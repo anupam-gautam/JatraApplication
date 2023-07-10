@@ -1,4 +1,6 @@
+using JatraApplication.IService.Events;
 using JatraApplication.Models.DatabaseModels;
+using JatraApplication.Service.Events;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,9 @@ builder.Services.AddDbContext<JatraDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+//dependency injection
+builder.Services.AddTransient<IEventDetailsService, EventDetailsService>();
 var app = builder.Build();
 
 

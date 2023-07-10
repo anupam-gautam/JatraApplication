@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace JatraApplication.Models.DatabaseModels;
 
-public partial class Event
+public class Event
 {
     public int EventId { get; set; }
 
