@@ -13,11 +13,10 @@
 
 <body>
     <div class="row">
-        <div class="col-3">
+        
             @{
                 Html.RenderPartial("~/Views/Common/_SideBar.cshtml");
             }
-        </div>
         <div class="col-9">
             <div class="container-fluid text-center" @*style="margin-left:10%"*@>
                 <h1 class="display-4">Calendar</h1>
@@ -25,14 +24,14 @@
 
                 <div class="row">
                     <div class="col-2">
-                        <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth-1))">
-                            ←Previous
+                        <button type="button" class="btn btn-success btn-sm " onclick="changeMonth(@(currMonth-1))">
+                           Previous
                         </button>
                     </div>
                     <div class="col"><b>@calendarInfo.metadata.np @calendarInfo.metadata.en</b></div>
                     <div class="col-2">
-                        <button type="button" class="btn btn-success" onclick="changeMonth(@(currMonth+1))">
-                            Next→
+                        <button type="button" class="btn btn-success btn-sm " onclick="changeMonth(@(currMonth+1))">
+                            Next 
                         </button>
                     </div>
                 </div>

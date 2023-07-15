@@ -3,95 +3,56 @@
     JatraDbContext _context = new JatraDbContext();
 }
 
-<style>
-    @@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-    .side-nav {
-        font-family: 'Space Mono', monospace;
-        display: flex;
-        flex-direction: column;
-        max-width: 420px;
-        padding: 32px;
-        margin: 60px auto;
-        border: 1px solid #eee;
-        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
-    }
+<div class="col-3">
+    <ul class="list-group">
 
-    * {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizelegibility;
-        letter-spacing: -0.25px;
-    }
-
-    ol {
-    }
-
-    .lis {
-        color: #4F4F4F;
-        padding-left: 16px;
-        margin-top: 24px;
-        position: relative;
-        font-size: 16px;
-        line-height: 20px;
-        &:before
-
-    {
-        content: '';
-        display: block;
-        height: 42px;
-        width: 42px;
-        border-radius: 50%;
-        border: 2px solid #ddd;
-        position: absolute;
-        top: -12px;
-        left: -46px;
-    }
-
-    }
-
-    strong {
-        color: #292929;
-    }
-
-    ol.alternating-colors {
-        padding-left: 50px;
-        li: nth-child(odd):before
-
-    {
-        border-color: #0BAD02;
-    }
-
-    li:nth-child(even):before {
-        border-color: #2378D5;
-    }
-
-    }
-</style>
-<div class="col-3 side-nav">
-    <strong>Lists Of Upcomming Events</strong>
-
-    <ol class="alternating-colors">
+        <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
+            Upcoming Events
+        </li>
         @{
-
             foreach (var i in _context.Events.ToList())
             {
-                var date = (i.EventStartDate.ToString("MM / dd / yyyy") == i.EventEndDate.ToString("MM / dd / yyyy") ? i.EventStartDate.ToString("MM / dd / yyyy") : i.EventStartDate.ToString("MM / dd / yyyy") + " - " + i.EventEndDate.ToString("MM / dd / yyyy"));
-
-                <li class="lis">
-                    <a href="#" data-id="@i.EventId">
-                        <strong>@i.EventName</strong>
-                        <p>
-                            @date
-
-                            <br />
-                            @i.EventLocation
-                        </p>
+                var date = (i.EventStartDate.ToString("MM / dd / yyyy"));
+                <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center" >
+                    <a href="#" data-id="@i.EventId" class="text-primary" style="text-decoration:none;">
+                        @i.EventName
                     </a>
+
                 </li>
+
+                
             }
         }
-        
+        <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a href="#" class="text-primary" style="text-decoration:none;">
+                HaibiDay
+            </a>
+
+        </li>
+
+        <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a href="#" class="text-primary" style="text-decoration:none;">
+                Hey Sultan
+            </a>
+
+        </li>
+        <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a href="#" class="text-primary" style="text-decoration:none;">
+                HaibiDay
+            </a>
+
+        </li>
+
+        <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+            <a href="#" class="text-primary" style="text-decoration:none;">
+                Hey Sultan
+            </a>
+
+        </li>
+
+
+    </ul>
 </div>
 
 
