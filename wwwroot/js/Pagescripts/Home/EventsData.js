@@ -6,22 +6,10 @@ var EventsDetail = function () {
         $('body').on('click', '#calendardays', function () {
             $("#calendar #calendardays li").on('click', function () {
                 var eventId = $(this).attr("data-eventId");
+                window.location.replace("https://localhost:7075/Event/GetEventDetails?eventId=" + eventId);
                 debugger
-                $.ajax({
-                    type: 'POST',
-                    url: me.getEventDetailUrl,
-                    data: { eventId : eventId },
-                    dataType: 'html',
-                    success: function (data) {
-                        debugger
-                        $('body').append(data);
-                    },
-                    error: function (error) {
-                        debugger
-                    }
-                });
-
             });
+           
         });
     }
 }

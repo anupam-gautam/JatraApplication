@@ -12,7 +12,7 @@ namespace JatraApplication.Controllers
             _eventDetailsService = eventDetailsService;
         }
 
-        [HttpPost]
+        
         public IActionResult GetEventDetails(int eventId)
         {
             var data = _eventDetailsService.GetDetails(eventId);
